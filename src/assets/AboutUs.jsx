@@ -1,18 +1,14 @@
 import React, { useEffect } from 'react';
-import { Button } from 'react-bootstrap';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function AboutUs() {
-  useEffect(() => {
-    AOS.init({ duration: 1000 }); 
-  }, []);
+ 
 
   return (
     <div className='bg-white C' id='about'>
       <div
         className='text-center font-semibold'
-        data-aos="flip-up" 
+       
       >
         <br /><br /><br />
         <h1 className='font-serif text-4xl text-black '>About Us</h1>
@@ -37,7 +33,7 @@ export default function AboutUs() {
       <br /><br />
 
       <div
-        data-aos="flip-up" 
+         
       >
         <img
           src='img/coffe.png'

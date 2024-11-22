@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap'
 export default function () {
     return (
         <div className=''>
-            <div className="relative h-[500px] bg-cover bg-center" style={{ backgroundImage: "url('/img/360_F_639672982_BBycKIvrACFKRWmCfEU1MubhWE2gR99Y.jpg')" }}>
+            <div className="relative h-[500px] bg-cover bg-center" style={{ backgroundImage: "url('img/exeperience.jpg')" }}>
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
