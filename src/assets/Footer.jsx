@@ -1,6 +1,10 @@
 import React from 'react';
 import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
 
+// Importing images from the public/img folder
+import amazonLogo from '/public/img/Amazon_3-removebg-preview.png';
+import flipkartLogo from '/public/img/Screenshot_2024-11-20_230054-removebg-preview.png';
+
 export default function Footer() {
   return (
     <div className="Footer p-6 text-white">
@@ -36,7 +40,7 @@ export default function Footer() {
             <h1 className="text-lg font-semibold md:ml-16">Quick Links</h1>
             <ul className="mt-6 space-y-4 md:ml-16">
               <li>
-                <a href="#home" className="text-white  hover:text-yellow-500">HOME</a>
+                <a href="#home" className="text-white hover:text-yellow-500">HOME</a>
               </li>
               <li>
                 <a href="#about" className="text-white hover:text-yellow-500">ABOUT US</a>
@@ -54,23 +58,26 @@ export default function Footer() {
           <div className="w-full md:w-1/3 p-4">
             <h1 className="text-lg font-semibold sm:ml-36">Buy Now</h1>
             <div className="mt-6 ">
-              <a href='https://www.amazon.com/'><img
-                src="img/Amazon_3-removebg-preview.png" alt="Amazon Logo" className=" h-14 w-36 mx-auto"
-              /></a>
+              <a href='https://www.amazon.com/'>
+                <img
+                  src={amazonLogo} // Use the imported image
+                  alt="Amazon Logo"
+                  className=" h-14 w-36 mx-auto"
+                />
+              </a>
             </div>
             <div className="mt-6">
-              <a href='https://www.flipkart.com/'><img
-                src="img/Screenshot_2024-11-20_230054-removebg-preview.png" alt="Second Logo" className="h-14 w-36 mx-auto"
-              /></a>
+              <a href='https://www.flipkart.com/'>
+                <img
+                  src={flipkartLogo} // Use the imported image
+                  alt="Flipkart Logo"
+                  className="h-14 w-36 mx-auto"
+                />
+              </a>
             </div>
           </div>
         </div>
       </div>
-
-      </div>
-      
-
-    
-    
+    </div>
   );
 }

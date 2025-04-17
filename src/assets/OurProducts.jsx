@@ -4,112 +4,110 @@ import 'aos/dist/aos.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
+// Importing images from the public/public/img folder
+import p1 from '/public/img/p1.jpg';
+import p2 from '/public/img/p2.jpeg';
+import p3 from '/public/img/p3.webp';
+import p4 from '/public/img/p4.jpg';
+import p5 from '/public/img/p5.avif';
+import p6 from '/public/img/p6.jpg';
+import p7 from '/public/img/p7.webp';
+import p8 from '/public/img/p8.webp';
+import p9 from '/public/img/p9.jpg';
+
 export default function OurProducts() {
     useEffect(() => {
-        AOS.init({ duration: 1000 }); 
+        AOS.init({ duration: 1000 });
     }, []);
+
+    // Define the product data in an array
+    const products = [
+        {
+            id: 1,
+            image: p1,
+            title: "Chocolate Flavour Instant Coffee - 50 g",
+            price: "$33.35",
+            description: "Delicious chocolate flavored instant coffee.",
+        },
+        {
+            id: 2,
+            image: p2,
+            title: "Mango Flavoured Coffee - 50gm - Gruner",
+            price: "$13.23",
+            description: "A tropical twist to your coffee.",
+        },
+        {
+            id: 3,
+            image: p3,
+            title: "Traditional Blend Filter Coffee Powder - 1kg",
+            price: "$21.50",
+            description: "Classic filter coffee blend for authentic taste.",
+        },
+        {
+            id: 4,
+            image: p4,
+            title: "Soluble Coffee Powder - 250 g",
+            price: "$45.35",
+            description: "Soluble coffee powder for quick brewing.",
+        },
+        {
+            id: 5,
+            image: p5,
+            title: "Pure Gold Freeze Dried Instant Coffee - 200 g",
+            price: "$41.00",
+            description: "Premium freeze-dried instant coffee.",
+        },
+        {
+            id: 6,
+            image: p6,
+            title: "Classic Instant Coffee - 100g",
+            price: "$27.50",
+            description: "A timeless instant coffee option.",
+        },
+        {
+            id: 7,
+            image: p7,
+            title: "Premium Instant Coffee Powder - 50 g (Buy 1 Get 2 Free)",
+            price: "$42.35",
+            description: "A premium blend with a fantastic offer.",
+        },
+        {
+            id: 8,
+            image: p8,
+            title: "French Vanilla Coffee - 150gm - Gruner (Coffee Cup Free)",
+            price: "$80.50",
+            description: "French Vanilla flavored coffee with a free coffee cup.",
+        },
+        {
+            id: 9,
+            image: p9,
+            title: "Continental Coffee XTRA Coffee Powder - 50g (Buy 1 Get 1 Free)",
+            price: "$11.50",
+            description: "Extra strong coffee with a buy 1 get 1 free offer.",
+        }
+    ];
 
     return (
         <div className='bg-white' id='products'>
             <div className='text-center'>
                 <br /><br /><br />
-                <h1 className='font-serif text-4xl text-black 'data-aos="flip-left">Our Product Range</h1>
+                <h1 className='font-serif text-4xl text-black' data-aos="flip-left">Our Product Range</h1>
             </div>
 
             <div className='flex flex-wrap justify-center gap-8 mt-12 mr-12 ml-12 card C'>
-                
-                <Card style={{ width: '18rem' }} className='cards bg-orange-50 rounded-2xl text-lg font-semibold text-center' data-aos="flip-down">
-                    <Card.Img src="https://d371c3ugbb3pk.cloudfront.net/pub/media/catalog/product/cache/9db98d540383868e55af1a0e488bebe5/i/c/icchoco_bi.jpg" className='h-60 w-52' />
-                    <Card.Body>
-                        <Card.Title>Chocolate Flavour Instant Coffee - 50 g</Card.Title>
-                        <Card.Text className='font-normal'>$33.35</Card.Text>
-                        <Button className='rounded-full text-sm mt-4 bg-red-950 text-white'>BUY NOW -></Button>
-                    </Card.Body>
-                </Card>
-
-                
-                <Card style={{ width: '18rem' }} className='cards bg-orange-50 rounded-2xl text-lg font-semibold text-center' data-aos="flip-down">
-                    <Card.Img src="https://5.imimg.com/data5/SELLER/Default/2024/6/430455583/TT/TE/ZK/24519589/gruner-mango-instant-coffee-50-gm-jar.jpeg" className='h-60 w-52' />
-                    <Card.Body>
-                        <Card.Title>Mango Flavoured Coffee - 50gm - Gruner</Card.Title>
-                        <Card.Text className='font-normal'>$13.23</Card.Text>
-                        <Button className='rounded-full text-sm mt-4 bg-red-950 text-white'>BUY NOW -></Button>
-                    </Card.Body>
-                </Card>
-
-                
-                <Card style={{ width: '18rem' }} className='cards bg-orange-50 rounded-2xl text-lg font-semibold text-center' data-aos="flip-down">
-                    <Card.Img src="https://5.imimg.com/data5/SELLER/Default/2023/2/EG/ZA/XT/18878414/sanchari-traditional-blend-filter-coffee-powder-500x500.jpeg" className='h-60 w-52' />
-                    <Card.Body>
-                        <Card.Title>Traditional Blend Filter Coffee Powder - 1kg</Card.Title>
-                        <Card.Text className='font-normal'>$21.50</Card.Text>
-                        <Button className='rounded-full text-sm mt-4 bg-red-950 text-white'>BUY NOW -></Button>
-                    </Card.Body>
-                </Card>
-
-                <Card style={{ width: '18rem' }} className='cards bg-orange-50 rounded-2xl text-lg font-semibold text-center' data-aos="flip-down">
-                    <Card.Img src="https://cdn.dmart.in/images/products/FEB130001755xx11FEB22_5_B.jpg" className='h-60 w-52' />
-                    <Card.Body>
-                        <Card.Title>Soluble Coffee Powder - 250 g</Card.Title>
-                        <Card.Text className='font-normal'>$45.35</Card.Text>
-                        <Button className='rounded-full text-sm mt-4 bg-red-950 text-white'>BUY NOW -></Button>
-                    </Card.Body>
-                </Card>
-
-                
-                <Card style={{ width: '18rem' }} className='cards bg-orange-50 rounded-2xl text-lg font-semibold text-center' data-aos="flip-down">
-                    <Card.Img src="https://www.luluhypermarket.com/cdn-cgi/image/f=auto/medias/1200Wx1200H-null?context=bWFzdGVyfGltYWdlc3w1NzI0ODF8aW1hZ2UvanBlZ3xhRGcwTDJnNU1TOHhOek16TkRrek56TTROekF6T0M4eE1qQXdWM2d4TWpBd1NGOXVkV3hzfDE5M2I0MzExOGNjYjFiOGFhZGFhY2IxNjZhODNmNTc4ZWNlNTcxODllM2NjMjY1NGM5NDVhMTA1YjAzNTU3MGQ" className='h-60 w-52' />
-                    <Card.Body>
-                        <Card.Title> Pure Gold Freeze Dried Instant Coffee - 200 g </Card.Title>
-                        <Card.Text className='font-normal'>$41.00</Card.Text>
-                        <Button className='rounded-full text-sm mt-4 bg-red-950 text-white'>BUY NOW -></Button>
-                    </Card.Body>
-                </Card>
-
-                
-                <Card style={{ width: '18rem' }} className='cards bg-orange-50 rounded-2xl text-lg font-semibold text-center' data-aos="flip-down">
-                    <Card.Img src="https://cdn.dmart.in/images/products/JAN130001965xx10JAN23_5_B.jpg" className='h-60 w-52' />
-                    <Card.Body>
-                        <Card.Title>Classic Instant Coffee - 100g</Card.Title>
-                        <Card.Text className='font-normal'>$27.50</Card.Text>
-                        <Button className='rounded-full text-sm mt-4 bg-red-950 text-white'>BUY NOW -></Button>
-                    </Card.Body>
-                </Card>
-
-                <Card style={{ width: '18rem' }} className='cards bg-orange-50 rounded-2xl text-lg font-semibold text-center' data-aos="flip-down">
-                    <Card.Img src="https://sleepyowl.co/cdn/shop/files/Our_Products_in_home_page_mobile_view.jpg?v=1722671639" className='h-60 w-52' />
-                    <Card.Body>
-                        <Card.Title>Premium Instant Coffee Powder  - 50 g</Card.Title>
-                        <Card.Title>(Buy 1 Get 2 Free)</Card.Title>
-                        <Card.Text className='font-normal'>$42.35</Card.Text>
-                        <Button className='rounded-full text-sm mt-4 bg-red-950 text-white'>BUY NOW -></Button>
-                    </Card.Body>
-                </Card>
-
-                
-                <Card style={{ width: '18rem' }} className='cards bg-orange-50 rounded-2xl text-lg font-semibold text-center' data-aos="flip-down">
-                    <Card.Img src="https://sleepyowl.co/cdn/shop/files/OG_FV_GC_1_540x.jpg?v=1727695218" className='h-60 w-52' />
-                    <Card.Body>
-                        <Card.Title>French Vanilla Coffee - 150gm - Gruner</Card.Title>
-                        <Card.Title>(Coffee Cup Free)</Card.Title>
-                        <Card.Text className='font-normal'>$80.50</Card.Text>
-                        <Button className='rounded-full text-sm mt-4 bg-red-950 text-white'>BUY NOW -></Button>
-                    </Card.Body>
-                </Card>
-
-                
-                <Card style={{ width: '18rem' }} className='cards bg-orange-50 rounded-2xl text-lg font-semibold text-center' data-aos="flip-down">
-                    <Card.Img src="https://m.media-amazon.com/images/I/51B4oX5pwrL.jpg" className='h-60 w-52' />
-                    <Card.Body>
-                        <Card.Title>Continental Coffee XTRA Coffee Powder - 50g </Card.Title>
-                        <Card.Title>(Buy 1 Get 1 Free)</Card.Title>
-                        <Card.Text className='font-normal'>$11.50</Card.Text>
-                        <Button className='rounded-full text-sm mt-4 bg-red-950 text-white'>BUY NOW -></Button>
-                    </Card.Body>
-                </Card>
-
+                {products.map(product => (
+                    <Card key={product.id} style={{ width: '18rem' }} className='cards bg-orange-50 rounded-2xl text-lg font-semibold text-center' data-aos="flip-down">
+                        <Card.Img src={product.image} className='h-60 w-52' />
+                        <Card.Body>
+                            <Card.Title>{product.title}</Card.Title>
+                            <Card.Text className='font-normal'>{product.price}</Card.Text>
+                            <Button className='rounded-full text-sm mt-4 bg-red-950 text-white'>BUY NOW -></Button>
+                        </Card.Body>
+                    </Card>
+                ))}
             </div>
-            <br/><br/><br/>
+
+            <br /><br /><br />
         </div>
     );
 }

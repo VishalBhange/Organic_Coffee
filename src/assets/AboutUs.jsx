@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import coffee from '/public/img/coffe.png';
 
 export default function AboutUs() {
   useEffect(() => {
@@ -39,8 +40,8 @@ export default function AboutUs() {
       <div
         data-aos="flip-up" 
       >
-        <img
-          src='img/coffe.png'
+        
+          <img src={coffee}
           className="w-full h-auto object-cover max-h-[500px] mx-auto"
           alt="Coffee"
         />
